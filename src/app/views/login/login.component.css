@@ -1,0 +1,22 @@
+.LoginForm input {
+
+    display: block;
+    width: 300px;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 5px
+}
+
+.LoginForm {
+    display: flex;
+    justify-content: center;
+}
+
+.LoginForm button {
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}

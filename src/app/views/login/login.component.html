@@ -1,0 +1,5 @@
+<form class="LoginForm" (submit)="login()">
+  <input type="text" required [(ngModel)]="email" placeholder="Email" name="email" />
+  <input type="password" required [(ngModel)]="password" placeholder="Password" name="password" />
+  <button type="submit" [disabled]="!(password&&email)">Login</button>
+</form>

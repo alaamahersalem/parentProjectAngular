@@ -1,0 +1,16 @@
+<a routerLink="/users">
+  back to users list
+</a>
+<div *ngIf="userData; else loading">
+  <ul>
+    <div><img [src]="userData.avatar" /></div>
+    <div> <label>Name: </label>{{userData.first_name}} {{userData.last_name}}</div>
+    <div><label> id:</label>{{userData.id}}</div>
+
+  </ul>
+</div>
+<ng-template #loading>
+  <p>
+    loading....
+  </p>
+</ng-template>

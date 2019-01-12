@@ -1,0 +1,27 @@
+<p>
+  users list
+</p>
+<div *ngIf="users && users.length!==0; else loading">
+  <ul>
+    <div class="userItem" *ngFor="let user of users">
+      <a routerLink="/user/{{user.id}}">
+        {{user.first_name}}
+      </a>
+      <label class="userItem_Actions">
+        <label class="userItem_delete" (click)="deleteUser(user.id)">x</label>
+        <label class="userItem_edit" (click)="editUser(user.id)">Edit</label>
+      </label>
+      <form class="editForm" *ngIf="user.editMode" (submit)="updateUser(user.id)">
+        <div><label>name</label><input [(ngModel)]="user.first_name" name="first_name" type="text" /></div>
+        <div><label>job</label><input (input)="onJobchChange($event.target.value,user.id)" type="text" /></div>
+        <button type="submit">Update</button>
+      </form>
+    </div>
+
+  </ul>
+</div>
+<ng-template #loading>
+  <p>
+    loading...
+  </p>
+</ng-template>

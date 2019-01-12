@@ -1,0 +1,44 @@
+.userItem {
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.userItem a {
+    /* float: left; */
+}
+
+.userItem_Actions {
+    margin-left: auto
+}
+
+.userItem_Actions label {
+    margin: 5px;
+    color: #607D8B;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.editForm {
+    flex: 0 0 100%;
+    margin-top: 10px;
+    border-top: 1px solid #9E9E9E;
+    padding: 5px;
+}
+
+.editForm input {
+    margin: 5px;
+    padding: 5px;
+    width: 300px;
+
+}
+
+.editForm button {
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
